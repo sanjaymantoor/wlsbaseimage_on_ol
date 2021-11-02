@@ -75,7 +75,7 @@ function downloadUsingWget()
    filename=${downloadURL##*/}
    for in in {1..5}
    do
-     wget $downloadURL
+     wget --no-check-certificate $downloadURL
      if [ $? != 0 ];
      then
         echo "$filename Driver Download failed on $downloadURL. Trying again..."
@@ -84,7 +84,7 @@ function downloadUsingWget()
         echo "$filename Driver Downloaded successfully"
         break
      fi
-   done
+   done 
 }
 
 function copyJDBCDriversToWeblogicClassPath()
