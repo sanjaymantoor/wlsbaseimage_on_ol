@@ -327,7 +327,7 @@
             "autoUpgradeMinorVersion":true,
             "settings":{
                "fileUris":[
-                  "https://raw.githubusercontent.com/jacobt123/wlsbaseimage/master/genericinstall.sh"
+                  "https://raw.githubusercontent.com/sanjaymantoor/wlsbaseimage_on_ol_sd/develop/genericinstall.sh"
                ],
                "commandToExecute":"[concat('sh genericinstall.sh',' ',parameters('acceptOTNLicenseAgreement'),' ',parameters('otnAccountUsername'),' ',parameters('otnAccountPassword'),' ',parameters('shiphomeurl'),' ',parameters('jdkurl'),' ',parameters('wlsversion'),' ',parameters('jdkversion'))]"
             }
