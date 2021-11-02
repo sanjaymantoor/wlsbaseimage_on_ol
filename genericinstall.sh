@@ -75,6 +75,7 @@ function downloadUsingWget()
    filename=${downloadURL##*/}
    for in in {1..5}
    do
+     echo wget --no-check-certificate $downloadURL
      wget --no-check-certificate $downloadURL
      if [ $? != 0 ];
      then
