@@ -99,6 +99,24 @@ function copyJDBCDriversToWeblogicClassPath()
      echo "Copied JDBC Drivers to Weblogic CLASSPATH"
 }
 
+function testJDBCDrivers()
+{
+
+# Temporarily added for test
+ls /u01/app/wls/install/oracle/middleware/oracle_home/wlserver/server/lib/postgresql-42.2.8.jar
+if [[ $? != 0 ]]; then
+   echo Downloading postgresql-42.2.8.jar failed
+   exit 1
+fi
+
+ls /u01/app/wls/install/oracle/middleware/oracle_home/wlserver/server/lib/mssql-jdbc-7.4.1.jre8.jar
+if [[ $? != 0 ]]; then
+   echo Downloading mssql-jdbc-7.4.1.jre8.jar failed
+   exit 1
+fi
+
+}
+
 function modifyWLSClasspath()
 {
   echo "Modify WLS CLASSPATH ...."
@@ -412,6 +430,8 @@ installWLS
 setupWDT
 
 downloadJDBCDrivers
+
+testJDBCDrivers
 
 copyJDBCDriversToWeblogicClassPath
 
