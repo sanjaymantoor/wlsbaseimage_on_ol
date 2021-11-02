@@ -432,11 +432,11 @@ setupWDT
 
 downloadJDBCDrivers
 
-testJDBCDrivers
-
 copyJDBCDriversToWeblogicClassPath
 
 modifyWLSClasspath
+
+testJDBCDrivers
 
 cleanup
 
